@@ -10,7 +10,8 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=walterCode
     volumes:
-      - /var/lib/docker/volumes/walter_mysql/_data:/var/lib/mysql
+      - ./data/mysql:/var/lib/mysql
+      - ./src/Migrations/DataBase.sql:/docker-entrypoint-initdb.d/DataBase.sql
   # PHP MyAdmin Service
   incubator_pma:
     image: phpmyadmin/phpmyadmin:latest
@@ -18,7 +19,7 @@ services:
     ports:
       - "8100:80"
     environment:
-      - PMA_HOST=localhost
+      - PMA_HOST=walter_mysql
       - PMA_PORT=3306
   node_app:
     container_name: walter_app
