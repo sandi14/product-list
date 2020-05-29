@@ -9,7 +9,7 @@ import productListRouter from '../Routes/ProductListRouter';
 class HttpServer {
     constructor(options = {}) {
         // this.port = options.serverPort || config.serverPort;
-        this.port = 2000;
+        this.port = 4000;
         // this.nodeEnv = options.nodeEnv || config.nodeEnv;
         this.app = express();
     }

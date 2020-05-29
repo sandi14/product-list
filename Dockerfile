@@ -7,5 +7,5 @@ COPY src ./src
 RUN npm install
 
 
-EXPOSE 2000
+EXPOSE 4000
 CMD npm start
