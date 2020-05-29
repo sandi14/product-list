@@ -9,6 +9,10 @@ How to run:
 
 Before you run application just check that you have Docker installed since app has been containerized.
 
+NOTES:
+
+Since my OS is Windows and my Docker is running on VirtualBox, I could not use "localhost" for testing, instead I used this IP address (192.168.99.100).
+
 docker-compose up --build -d
 
 Auth
@@ -20,7 +24,7 @@ Create (register) user:
 
 Method: POST
 
-http://localhost:2000/user/register
+http://localhost:4000/user/register
 
 body:
 
@@ -35,7 +39,7 @@ body:
 
 LogIn user:
 
-localhost:2000/user/login
+http://localhost:4000/user/login
 
 Method: POST
 
@@ -50,7 +54,7 @@ body:
 
 Change user password:
 
-localhost:2000/user/change/password
+http://localhost:4000/user/change/password
 
 Method: PATCH
 
@@ -65,7 +69,7 @@ body:
 
 Add Product:
 
-localhost:2000/product/add
+http://localhost:4000/product/add
 
 Method: POST
 
@@ -79,7 +83,7 @@ body:
 
 Update Product:
 
-localhost:2000/product/update/:id
+http://localhost:4000/product/update/:id
 
 Method: PUT
 
@@ -93,7 +97,7 @@ body:
 
 Create Product List:
 
-localhost:2000/product/list/add
+http://localhost:4000/product/list/add
 
 Method: POST
 
@@ -118,7 +122,7 @@ body:
 
 Update product list:
 
-localhost:2000/product/list/update/:id
+http://localhost:4000/product/list/update/:id
 
 Method: PUT
 
@@ -140,7 +144,7 @@ body:
 
 Create report:
 
-localhost:2000/product/list/report?dateFrom={dateFrom}&dateTo={dateTo}
+http://localhost:4000/product/list/report?dateFrom={dateFrom}&dateTo={dateTo}
 
 Method: GET
 
